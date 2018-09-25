@@ -1,9 +1,9 @@
-import { redisHost, redisPort } from './keys';
-import redis from 'redis'
+const keys = require ('./keys');
+const redis = require('redis');
 
 const redicSlient = redis.createClient({
-    host: redisHost,
-    port: redisPort,
+    host: keys.redisHost,
+    port: keys.redisPort,
     retry_strategy: () => 1000
 });
 
