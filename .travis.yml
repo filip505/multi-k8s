@@ -18,10 +18,10 @@ after_success:
   # Take those images and push them to docker hub
 
   - docker push filip505/multi-client
-  - docker push filip505/multi-client
-  - docker push filip505/multi-client
-  - docker push filip505/multi-client
-  
+  - docker push filip505/multi-nginx
+  - docker push filip505/multi-server
+  - docker push filip505/multi-worker
+
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
