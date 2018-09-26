@@ -17,6 +17,11 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID"  --password-stdin
   # Take those images and push them to docker hub
 
+  - docker push filip505/multi-client
+  - docker push filip505/multi-client
+  - docker push filip505/multi-client
+  - docker push filip505/multi-client
+  
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
