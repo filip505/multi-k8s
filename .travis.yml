@@ -16,11 +16,7 @@ after_success:
   # Log in to the docke CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID"  --password-stdin
   # Take those images and push them to docker hub
-  - docker push multi-client
-  - docker push multi-nginx
-  - docker push multi-server
-  - docker push multi-worker
-
+  
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
